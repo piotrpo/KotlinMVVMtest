@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">KotlinMVVM test</string>
+    <string name="title_activity_kotlin">KotlinActivity</string>
+    <string name="label_show">show</string>
+    <string name="label_reset">reset</string>
+    <string name="label_clear">clear</string>
+</resources>

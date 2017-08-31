@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+        <variable
+            name="user"
+            type="pl.com.digita.kotlinmvvmtest.UserEntity"/>
+        <variable
+            name="handlers"
+            type="pl.com.digita.kotlinmvvmtest.KotlinActivityHandlers"/>
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:context=".KotlinActivity">
+
+        <EditText
+            android:id="@+id/firstName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={user.firstName}"
+            tools:text="FirstName"
+            android:inputType="textPersonName"
+            android:hint="First Name"/>
+
+        <EditText
+            android:id="@+id/lastName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@={user.lastName}"
+            tools:text="LastName"
+            android:inputType="textPersonName"
+            android:hint="Last Name"/>
+
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_show"
+            android:onClick="@{handlers::run}"/>
+        <Button
+            android:id="@+id/resetButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_reset"
+            android:onClick="@{handlers::reset}"/>
+        <Button
+            android:id="@+id/clearButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label_clear"
+            android:onClick="@{handlers::clear}"/>
+    </LinearLayout>
+</layout>
